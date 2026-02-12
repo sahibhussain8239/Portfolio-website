@@ -4,22 +4,40 @@ import ProjectCard from "@/components/ui/ProjectCard";
 
 const projects = [
     {
-        title: "Neon Horizon",
-        description: "A cyberpunk inspired landing page featuring complex WebGL shaders and interactive 3D elements.",
+        title: "Netflix Clone",
+        description: "A replica of the Netflix user interface.",
         image: "/placeholder",
-        link: "#"
+        link: "/Projects/Project-1-Netfilx-Clone/index.html"
     },
     {
-        title: "Glass OS",
-        description: "An experimental operating system interface built entirely with CSS glassmorphism and React.",
+        title: "Spotify Clone",
+        description: "A music streaming service clone inspired by Spotify.",
         image: "/placeholder",
-        link: "#"
+        link: "/Projects/Project-2-Spotify-Clone/index.html"
     },
     {
-        title: "Void Commerce",
-        description: "Minimalist e-commerce platform focusing on typography and negative space.",
+        title: "X.com Clone",
+        description: "A social media platform clone resembling X (formerly Twitter).",
         image: "/placeholder",
-        link: "#"
+        link: "/Projects/Project-3-X.com-Clone/index.html"
+    },
+    {
+        title: "Todo List App",
+        description: "A React-based application for managing daily tasks.",
+        image: "/placeholder",
+        link: "/Projects/Project-4-TodoListApp-React/dist/index.html"
+    },
+    {
+        title: "Password Manager",
+        description: "A secure application for storing and managing passwords.",
+        image: "/placeholder",
+        link: "/Projects/Project-5-Password-manager/dist/index.html"
+    },
+    {
+        title: "Productivity App",
+        description: "A comprehensive tool to boost personal productivity.",
+        image: "/placeholder",
+        link: "/projects/productivity-app"
     },
 ];
 
