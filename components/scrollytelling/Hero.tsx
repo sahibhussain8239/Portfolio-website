@@ -49,7 +49,7 @@ export default function Hero() {
                         className="text-center w-full max-w-4xl mx-auto"
                     >
                         <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
-                            Immersive Experiences
+                            Code that delivers
                         </h2>
                     </motion.div>
                 </div>
