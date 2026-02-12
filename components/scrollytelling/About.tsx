@@ -16,8 +16,8 @@ export default function About() {
     });
 
     return (
-        <div ref={containerRef} className="relative h-[350vh] bg-zinc-950 my-50">
-            <div className="sticky top-0 h-screen flex items-center justify-center px-4 overflow-hidden">
+        <div ref={containerRef} className="relative h-[350vh] bg-zinc-950 z-10">
+            <div className="sticky top-0 h-screen flex items-center justify-center px-4 overflow-hidden bg-zinc-950">
                 <div className="max-w-6xl mx-auto relative z-10">
                     <p className="text-xl md:text-2xl text-zinc-400 mb-4">About Me</p>
                     <TextReveal

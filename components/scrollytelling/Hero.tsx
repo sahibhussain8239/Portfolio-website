@@ -9,21 +9,25 @@ export default function Hero() {
 
     const { scrollYProgress } = useScroll({
         target: containerRef,
-        offset: ["start start", "end end"]
+        offset: ["start start", "end start"]
     });
 
     // Blur effect: starts at 0, blurs slightly as we scroll deep
     const blurValue = useTransform(scrollYProgress, [0, 0.5, 1], ["blur(0px)", "blur(0px)", "blur(10px)"]);
 
     return (
-        <div ref={containerRef} className="relative h-[400vh] bg-black">
-            <div className="sticky top-0 h-screen w-full overflow-hidden">
-                <CanvasSequence
-                    folderPath="/sequence"
-                    frameCount={120}
-                    progress={scrollYProgress}
+        <div ref={containerRef} className="relative h-[300vh]">
+            <div className="fixed top-0 left-0 h-screen w-full overflow-hidden">
+                <motion.div
+                    className="absolute inset-0 w-full h-full"
                     style={{ filter: blurValue }}
-                />
+                >
+                    <CanvasSequence
+                        folderPath="/sequence"
+                        frameCount={120}
+                        progress={scrollYProgress}
+                    />
+                </motion.div>
 
                 {/* First Text: Visible initially, fades out quickly */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10 p-4">

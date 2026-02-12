@@ -1,5 +1,7 @@
 "use client";
 
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import ProjectCard from "@/components/ui/ProjectCard";
 
 const projects = [
@@ -33,27 +35,42 @@ const projects = [
         image: "/placeholder",
         link: "/Projects/Project-5-Password-manager/dist/index.html"
     },
-    {
-        title: "Productivity App",
-        description: "A comprehensive tool to boost personal productivity.",
-        image: "/placeholder",
-        link: "/projects/productivity-app"
-    },
 ];
 
 export default function Projects() {
+    const containerRef = useRef<HTMLDivElement>(null);
+    const scrollRef = useRef<HTMLDivElement>(null);
+
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start start", "end end"]
+    });
+
+    // Transform scroll progress to horizontal scroll position
+    const x = useTransform(scrollYProgress, [0, 1], [0, -1000]);
+
     return (
-        <section className="min-h-screen py-32 px-4 md:px-12 bg-black relative">
-            <div className="max-w-7xl mx-auto">
-                <h2 className="text-4xl md:text-7xl font-bold text-white mb-24 text-center tracking-tighter">
-                    Selected Works
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((p, i) => (
-                        <ProjectCard key={i} index={i} {...p} />
-                    ))}
+        <div ref={containerRef} className="relative h-[350vh] bg-black z-20">
+            <section className="sticky top-0 h-screen py-32 px-4 md:px-12 bg-black overflow-hidden flex items-center">
+                <div className="max-w-7xl mx-auto w-full">
+                    <h2 className="text-4xl md:text-7xl font-bold text-white mb-24 text-center tracking-tighter">
+                        Projects
+                    </h2>
+                    <div className="overflow-hidden">
+                        <motion.div
+                            ref={scrollRef}
+                            className="flex gap-8 pb-8"
+                            style={{ x }}
+                        >
+                            {projects.map((p, i) => (
+                                <div key={i} className="min-w-[350px] max-w-[400px] md:min-w-[400px] flex-shrink-0">
+                                    <ProjectCard index={i} {...p} />
+                                </div>
+                            ))}
+                        </motion.div>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     );
 }
