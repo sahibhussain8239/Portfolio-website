@@ -21,10 +21,10 @@ export default function About() {
                 <div className="max-w-6xl mx-auto relative z-10">
                     <p className="text-xl md:text-2xl text-zinc-400 mb-4">About Me</p>
                     <TextReveal
-                        text="I don’t just create websites, I engineer complete digital systems. From frontend to backend, I build applications that are built to perform, scale, and last."
+                        text="Hi, I’m Sahib Hussain, a web developer currently learning and building modern web applications. I enjoy working with React and exploring backend fundamentals to grow into a stronger developer."
                         className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight"
                         progress={scrollYProgress}
-                        highlightedWords={["From", "frontend", "to", "backend,", "perform,", "scale,", "and", "last."]}
+                        highlightedWords={["Sahib", "Hussain"]}
                     />
                 </div>
             </div>

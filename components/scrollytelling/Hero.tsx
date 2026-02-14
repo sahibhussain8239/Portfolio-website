@@ -32,12 +32,12 @@ export default function Hero() {
                 {/* First Text: Visible initially, fades out quickly */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10 p-4">
                     <motion.div
-                        style={{ opacity: useTransform(scrollYProgress, [0, 0.25], [1, 0]) }}
+                        style={{ opacity: useTransform(scrollYProgress, [0, 0.10], [1, 0]) }}
                         className="text-center w-full max-w-4xl mx-auto"
                     >
                         <p className="text-xl md:text-2xl text-zinc-400 mb-4">Sahib Hussain</p>
                         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tighter w-[80%] mx-auto leading-tight">
-                            Full Stack Developer who ships real apps, not excuses.
+                            Web Developer Growing Through Practice and Projects
                         </h1>
                     </motion.div>
                 </div>
@@ -45,11 +45,11 @@ export default function Hero() {
                 {/* Second Text: Appears later, ensuring no overlap */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10 p-4">
                     <motion.div
-                        style={{ opacity: useTransform(scrollYProgress, [0.2, 0.3, 0.5, 0.6], [0, 1, 1, 0]) }}
+                        style={{ opacity: useTransform(scrollYProgress, [0.10, 0.15, 0.20, 0.40], [0, 1, 1, 0]) }}
                         className="text-center w-full max-w-4xl mx-auto"
                     >
                         <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
-                            Code that delivers
+                            Building responsive websites and improving every day
                         </h2>
                     </motion.div>
                 </div>
