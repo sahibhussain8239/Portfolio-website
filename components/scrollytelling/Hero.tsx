@@ -26,8 +26,8 @@ export default function Hero() {
                 delay: 0.5
             });
 
-            // Staggered reveal for metrics
-            if (metricsRef.current) {
+            // Staggered reveal for metrics (if they exist)
+            if (metricsRef.current && metricsRef.current.children.length > 0) {
                 gsap.from(metricsRef.current.children, {
                     opacity: 0,
                     y: 20,
@@ -67,9 +67,9 @@ export default function Hero() {
                         <p className="text-xl md:text-2xl text-zinc-400 mb-6 uppercase tracking-[0.5em]">Sahib Hussain</p>
                         <h1
                             ref={headlineRef}
-                            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-[0.3em] md:tracking-[0.8em] uppercase mb-12 leading-tight"
+                            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight md:tracking-[0.8em] uppercase mb-12 leading-tight"
                         >
-                            W E L C O M E &nbsp; I T Z &nbsp; S A H I B
+                            Welcome itz Sahib
                         </h1>
 
                     </motion.div>

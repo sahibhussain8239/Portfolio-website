@@ -9,31 +9,31 @@ const projects = [
         title: "Netflix Clone",
         description: "A replica of the Netflix user interface.",
         image: "/placeholder",
-        link: "/Projects/Project-1-Netfilx-Clone/index.html"
+        link: "/projects/project-1-netfilx-clone/index.html"
     },
     {
         title: "Spotify Clone",
         description: "A music streaming service clone inspired by Spotify.",
         image: "/placeholder",
-        link: "/Projects/Project-2-Spotify-Clone/index.html"
+        link: "/projects/project-2-spotify-clone/index.html"
     },
     {
         title: "X.com Clone",
         description: "A social media platform clone resembling X (formerly Twitter).",
         image: "/placeholder",
-        link: "/Projects/Project-3-X.com-Clone/index.html"
+        link: "/projects/project-3-x.com-clone/index.html"
     },
     {
         title: "Todo List App",
         description: "A React-based application for managing daily tasks.",
         image: "/placeholder",
-        link: "/Projects/Project-4-TodoListApp-React/dist/index.html"
+        link: "/projects/project-4-todolistapp-react/dist/index.html"
     },
     {
         title: "Password Manager",
         description: "A secure application for storing and managing passwords.",
         image: "/placeholder",
-        link: "/Projects/Project-5-Password-manager/dist/index.html"
+        link: "/projects/project-5-password-manager/dist/index.html"
     },
 ];
 

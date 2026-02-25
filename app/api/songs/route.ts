@@ -4,7 +4,7 @@ import path from "path";
 
 export async function GET() {
     try {
-        const songsDir = path.join(process.cwd(), "public", "Projects", "Project-2-Spotify-Clone", "songs");
+        const songsDir = path.join(process.cwd(), "public", "projects", "project-2-spotify-clone", "songs");
 
         // Check if directory exists
         if (!fs.existsSync(songsDir)) {

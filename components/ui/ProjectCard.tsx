@@ -15,7 +15,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ title, description, link, className, index }: ProjectCardProps) {
     return (
-        <Link href={link || "#"} className={cn("block group relative no-underline", className)}>
+        <a href={link || "#"} className={cn("block group relative no-underline", className)}>
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -36,6 +36,6 @@ export default function ProjectCard({ title, description, link, className, index
                     View Project <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
                 </div>
             </motion.div>
-        </Link>
+        </a>
     );
 }
