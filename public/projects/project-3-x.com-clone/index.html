@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X.com Clone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/output.css">
+</head>
+
+<body
+    class="bg-black text-white font-[ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji] absolute">
+    <div class="flex container mx-auto">
+        <div class="first w-[25vw] my-1 mx-2">
+            <div class="sidebar flex justify-end fixed left-30">
+                <ul class="flex flex-col text-xl space-y-3 font-bold" style="font-variation-settings: 'opsz' 30;">
+                    <li
+                        class="flex justify-start items-center m-0 gap-3 w-fit px-5 py-3 hover:rounded-full hover:cursor-pointer hover:bg-[#252525]">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"
+                            class="w-8 m-auto invert r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-lrsllp r-1nao33i r-16y2uox r-8kz0gk">
+                            <g>
+                                <path
+                                    d="M21.742 21.75l-7.563-11.179 7.056-8.321h-2.456l-5.691 6.714-4.54-6.714H2.359l7.29 10.776L2.25 21.75h2.456l6.035-7.118 4.818 7.118h6.191-.008zM7.739 3.818L18.81 20.182h-2.447L5.29 3.818h2.447z">
+                                </path>
+                            </g>
+                        </svg>
+                    </li>
+                    <li
+                        class="flex justify-start items-center m-0 gap-3 w-fit px-5 py-3 hover:rounded-full hover:cursor-pointer hover:bg-[#252525]">
+                        <span class="material-symbols-outlined text-4xl">home</span>Home
+                    </li>
+                    <li
+                        class="flex justify-start items-center m-0 gap-3 w-fit px-5 py-3 hover:rounded-full hover:cursor-pointer hover:bg-[#252525]">
+                        <span class="material-symbols-outlined text-4xl">search</span>Search
+                    </li>
+                    <li
+                        class="flex justify-start items-center m-0 gap-3 w-fit px-5 py-3 hover:rounded-full hover:cursor-pointer hover:bg-[#252525]">
+                        <span class="material-symbols-outlined text-4xl">notifications</span>Notifications
+                    </li>
+                    <li
+                        class="flex justify-start items-center m-0 gap-3 w-fit px-5 py-3 hover:rounded-full hover:cursor-pointer hover:bg-[#252525]">
+                        <span class="material-symbols-outlined text-4xl">person_add</span>Follow
+                    </li>
+                    <li
+                        class="flex justify-start items-center m-0 gap-3 w-fit px-5 py-3 hover:rounded-full hover:cursor-pointer hover:bg-[#252525]">
+                        <span class="material-symbols-outlined text-4xl">mail</span>Chat
+                    </li>
+                    <li
+                        class="flex justify-start items-center m-0 gap-3 w-fit px-5 py-3 hover:rounded-full hover:cursor-pointer hover:bg-[#252525]">
+                        <svg viewBox="0 0 33 32" aria-hidden="true"
+                            class="w-6 invert r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
+                            <g>
+                                <path
+                                    d="M12.745 20.54l10.97-8.19c.539-.4 1.307-.244 1.564.38 1.349 3.288.746 7.241-1.938 9.955-2.683 2.714-6.417 3.31-9.83 1.954l-3.728 1.745c5.347 3.697 11.84 2.782 15.898-1.324 3.219-3.255 4.216-7.692 3.284-11.693l.008.009c-1.351-5.878.332-8.227 3.782-13.031L33 0l-4.54 4.59v-.014L12.743 20.544m-2.263 1.987c-3.837-3.707-3.175-9.446.1-12.755 2.42-2.449 6.388-3.448 9.852-1.979l3.72-1.737c-.67-.49-1.53-1.017-2.515-1.387-4.455-1.854-9.789-.931-13.41 2.728-3.483 3.523-4.579 8.94-2.697 13.561 1.405 3.454-.899 5.898-3.22 8.364C1.49 30.2.666 31.074 0 32l10.478-9.466">
+                                </path>
+                            </g>
+                        </svg>Grok
+                    </li>
+                    <li
+                        class="flex justify-start items-center m-0 gap-3 w-fit px-5 py-3 hover:rounded-full hover:cursor-pointer hover:bg-[#252525]">
+                        <span class="material-symbols-outlined text-4xl">list_alt</span>List
+                    </li>
+                    <li
+                        class="flex justify-start items-center m-0 gap-3 w-fit px-5 py-3 hover:rounded-full hover:cursor-pointer hover:bg-[#252525]">
+                        <span class="material-symbols-outlined text-4xl">bookmark</span>Bookmarks
+                    </li>
+                    <li
+                        class="flex justify-start items-center m-0 gap-3 w-fit px-5 py-3 hover:rounded-full hover:cursor-pointer hover:bg-[#252525]">
+                        <span class="material-symbols-outlined text-4xl">group</span>Communities
+                    </li>
+                    <li
+                        class="flex justify-start items-center m-0 gap-3 w-fit px-5 py-3 hover:rounded-full hover:cursor-pointer hover:bg-[#252525]">
+                        <svg viewBox="0 0 22 22" aria-hidden="true"
+                            class="w-6 m-auto invert r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-lrsllp r-1nao33i r-16y2uox r-8kz0gk">
+                            <g>
+                                <path
+                                    d="M21.742 21.75l-7.563-11.179 7.056-8.321h-2.456l-5.691 6.714-4.54-6.714H2.359l7.29 10.776L2.25 21.75h2.456l6.035-7.118 4.818 7.118h6.191-.008zM7.739 3.818L18.81 20.182h-2.447L5.29 3.818h2.447z">
+                                </path>
+                            </g>
+                        </svg>
+                        Premium
+                    </li>
+                    <li
+                        class="flex justify-start items-center m-0 gap-3 w-fit px-5 py-3 hover:rounded-full hover:cursor-pointer hover:bg-[#252525]">
+                        <span class="material-symbols-outlined text-4xl">person</span>Profile
+                    </li>
+                    <li
+                        class="flex justify-start items-center m-0 gap-3 w-fit px-5 py-3 hover:rounded-full hover:cursor-pointer hover:bg-[#252525]">
+                        <span class="material-symbols-outlined text-4xl">more_horiz</span>More
+                    </li>
+                    <div class="post pl-2"><button
+                            class="bg-white text-black border w-60 rounded-full border-none py-1 h-13 px-5 font-bold ">Post</button>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mt-7 ml-5">
+                            <div class="flex items-center gap-2">
+                                <img class="w-11 h-11 z-1 border border-black rounded-full flex-wrap"
+                                    src="https://abs.twimg.com/sticky/default_profile_images/default_profile_bigger.png"
+                                    alt="">
+                                <div>
+                                    <p class="text-sm font-bold">Sahib Hussain</p>
+                                    <p class="text-[#61656a] text-xs font-semibold">@SahibH8239</p>
+                                </div>
+                            </div>
+                            <div><span class="material-symbols-outlined">more_horiz</span></div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="flex relative min-h-0">
+            <div class="second w-[39vw] border border-[#2f3336] border-y-black ">
+                <div class="flex justify-center items-center text-center" style="position: sticky; top: 0;">
+                    <div class="for w-1/2 h-15 p-5">For you</div>
+                    <div class="following w-1/2 h-15 p-5">Following</div>
+                </div>
+                <div class="sepration w-full h-0.5 bg-[#2f3336] sticky top-15">
+                    <div class="bar relative left-31 bottom-1 h-1 bg-blue-400 w-13 border rounded-2xl border-none">
+                    </div>
+                </div>
+                <div class="whats flex">
+                    <div class="dp w-16 h-38">
+                        <div class="relative left-5 top-4"><img class="contain w-10 border border-none rounded-full"
+                                src="https://abs.twimg.com/sticky/default_profile_images/default_profile_bigger.png"
+                                alt=""></div>
+                    </div>
+                    <div class="w-full ml-3">
+                        <div class="w-full">
+                            <input class="w-full h-12 py-3 my-2 text-xl" type="text" placeholder="What's happening?">
+                            <div class="flex text-blue-500 items-center font-bold gap-1 py -1 ">
+                                <span class="material-symbols-outlined" style="font-size: 17px;">globe</span>
+                                <p>Everyone can reply</p>
+                            </div>
+                            <div class="sepration h-0.5 w-[95%] bg-[#2f3336] mt-3"></div>
+                            <div class="flex justify-between items-center">
+                                <div class="flex gap-3 my-3 text-blue-400 items-center">
+                                    <span class="material-symbols-outlined" style="font-size: 20px;">imagesmode</span>
+                                    <span class="material-symbols-outlined" style="font-size: 20px;">gif_box</span>
+                                    <svg viewBox="0 0 33 32" aria-hidden="true" class="w-6 fill-blue-400">
+                                        <g>
+                                            <path
+                                                d="M12.745 20.54l10.97-8.19c.539-.4 1.307-.244 1.564.38 1.349 3.288.746 7.241-1.938 9.955-2.683 2.714-6.417 3.31-9.83 1.954l-3.728 1.745c5.347 3.697 11.84 2.782 15.898-1.324 3.219-3.255 4.216-7.692 3.284-11.693l.008.009c-1.351-5.878.332-8.227 3.782-13.031L33 0l-4.54 4.59v-.014L12.743 20.544m-2.263 1.987c-3.837-3.707-3.175-9.446.1-12.755 2.42-2.449 6.388-3.448 9.852-1.979l3.72-1.737c-.67-.49-1.53-1.017-2.515-1.387-4.455-1.854-9.789-.931-13.41 2.728-3.483 3.523-4.579 8.94-2.697 13.561 1.405 3.454-.899 5.898-3.22 8.364C1.49 30.2.666 31.074 0 32l10.478-9.466">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span class="material-symbols-outlined" style="font-size: 20px;">ballot</span>
+                                    <span class="material-symbols-outlined"
+                                        style="font-size: 20px;">sentiment_satisfied</span>
+                                    <span class="material-symbols-outlined"
+                                        style="font-size: 20px;">calendar_clock</span>
+                                    <span class="material-symbols-outlined" style="font-size: 20px;">location_on</span>
+                                </div>
+                                <div
+                                    class="bg-gray-400 text-black font-bold w-17 h-9 border border-none rounded-4xl px-4.5 py-1 mr-4">
+                                    Post
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sepration w-full h-0.5 bg-[#2f3336]"></div>
+                <div class="h-13 flex items-center justify-center text-blue-400">
+                    <p>Show 130 posts</p>
+                </div>
+                <div class="sepration w-full h-px bg-[#2f3336]"></div>
+                <div class="post">
+                    <div class="header flex gap-3 m-3">
+                        <div><img class="border rounded-full border-none w-10"
+                                src="https://pbs.twimg.com/profile_images/1976645166078320640/bFOLUR-6_bigger.jpg"
+                                alt=""></div>
+                        <div>
+                            <div class="flex">
+                                <p class="font-bold">Steve🏳️‍🌈</p><span
+                                    class="material-symbols-outlined text-blue-400 ">verified</span>
+                                <p class="text-[#61656a]">🟡 @SteveLovesAmmo · 6h</p>
+                            </div>
+                            <div class="w-115">
+                                <p>I really want to own a home with a secret passageway one day.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-9">
+                            <svg viewBox="0 0 33 32" aria-hidden="true" class="w-5 fill-[#61656a]">
+                                <g>
+                                    <path
+                                        d="M12.745 20.54l10.97-8.19c.539-.4 1.307-.244 1.564.38 1.349 3.288.746 7.241-1.938 9.955-2.683 2.714-6.417 3.31-9.83 1.954l-3.728 1.745c5.347 3.697 11.84 2.782 15.898-1.324 3.219-3.255 4.216-7.692 3.284-11.693l.008.009c-1.351-5.878.332-8.227 3.782-13.031L33 0l-4.54 4.59v-.014L12.743 20.544m-2.263 1.987c-3.837-3.707-3.175-9.446.1-12.755 2.42-2.449 6.388-3.448 9.852-1.979l3.72-1.737c-.67-.49-1.53-1.017-2.515-1.387-4.455-1.854-9.789-.931-13.41 2.728-3.483 3.523-4.579 8.94-2.697 13.561 1.405 3.454-.899 5.898-3.22 8.364C1.49 30.2.666 31.074 0 32l10.478-9.466">
+                                    </path>
+                                </g>
+                            </svg>
+                            <span class="material-symbols-outlined text-[#61656a]">more_horiz</span>
+                        </div>
+                    </div>
+                    <div class="w-[515px] ml-16">
+                        <div class="contant border border-[#2f3336] rounded-2xl w-5/6 h-110">
+                            <div class="">
+                                <video controls class="aspect-video border border-none rounded-2xl object-scale-down" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"></video>
+                            </div>    
+                        </div>
+                        <div class="Likes flex justify-between text-[#61656a] my-3">
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined flex items-center">chat_bubble</span>55
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined flex items-center">repeat</span>406
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined flex items-center">favorite</span>3.3k
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined flex items-center">bar_chart_4_bars</span>3.3k
+                            </div>
+                            <div>
+                                <span class="material-symbols-outlined">bookmark</span>
+                                <span class="material-symbols-outlined">upload</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sepration w-full h-px bg-[#2f3336]"></div>
+            </div>
+            <div class="third w-[30vw] ">
+                <div class="rightendside mx-8 my-2 mr-20 flex flex-col gap-5">
+                    
+                    <div class="search border rounded-full border-[#2f3336] flex items-center bg-black z-10" style="position: sticky; top: 3px;">
+                        <span class="material-symbols-outlined pl-2 text-[#2f3336]">search</span>
+                        <input type="text" class="w-xs text-gray-300 py-2" placeholder="Search">
+                    </div>
+                    <div class="Subscribe border rounded-2xl border-[#2f3336] px-5 py-3 flex flex-col gap-3">
+                        <p class="text-xl font-bold">Subscribe to Premium</p>
+                        <p>Subscribe to unlock new features and if eligible, receive a share of revenue.</p>
+                        <button
+                            class="bg-blue-400 border rounded-full border-none py-2 px-1 font-bold w-30">Subscribe</button>
+                    </div>
+                    <div class="News border rounded-2xl border-[#2f3336] px-5 py-3 flex flex-col gap-6">
+                        <div class="text-xl font-bold flex items-center justify-between">Today's News <span
+                                class="material-symbols-outlined " style="font-size: 18px;">close</span></div>
+                        <div>
+                            <p class="font-semibold">Jacob Bethell Scores Maiden Test Century in Sydney Ashes Thriller
+                            </p>
+                            <div>
+                                <div class="h-6 flex items-center mt-2">
+                                    <img class="w-6 h-6 z-3 border border-black rounded-full flex-wrap"
+                                        src="https://pbs.twimg.com/profile_images/1920153674648551424/_jP8iACJ_normal.jpg"
+                                        alt="">
+                                    <img class="w-6 h-6 z-2 -ml-3 border border-black rounded-full flex-wrap"
+                                        src="https://pbs.twimg.com/profile_images/1555157162774503425/9X-c8Owm_normal.jpg"
+                                        alt="">
+                                    <img class="w-6 h-6 z-1 -ml-3 border border-black rounded-full flex-wrap"
+                                        src="https://pbs.twimg.com/profile_images/1285795195884199936/ZCCtzvKj_normal.jpg"
+                                        alt="">
+                                    <p class="text-[#61656a] text-xs ml-2 font-semibold">22 hours ago · Sports · 14.4K
+                                        posts</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Delhi Clears 39,000 Sq Ft Encroachments Near Historic Mosque After
+                                Court Order</p>
+                            <div>
+                                <div class="h-6 flex items-center mt-2">
+                                    <img class="w-6 h-6 z-5 border border-black rounded-full flex-wrap"
+                                        src="https://pbs.twimg.com/profile_images/1555157162774503425/9X-c8Owm_normal.jpg"
+                                        alt="">
+                                    <img class="w-6 h-6 z-4 -ml-3 border border-black rounded-full flex-wrap"
+                                        src="https://pbs.twimg.com/profile_images/1285795195884199936/ZCCtzvKj_normal.jpg"
+                                        alt="">
+                                    <img class="w-6 h-6 z-3 -ml-3 border border-black rounded-full flex-wrap"
+                                        src="https://pbs.twimg.com/profile_images/1920153674648551424/_jP8iACJ_normal.jpg"
+                                        alt="">
+                                    <p class="text-[#61656a] text-xs ml-2 font-semibold">8 hours ago · News · 22.9K
+                                        posts</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Jana Nayagan Advance Bookings Surge Worldwide Amid Indian Censor
+                                Delay</p>
+                            <div>
+                                <div class="h-6 flex items-center mt-2">
+                                    <img class="w-6 h-6 z-4 border border-black rounded-full flex-wrap"
+                                        src="https://pbs.twimg.com/profile_images/1285795195884199936/ZCCtzvKj_normal.jpg"
+                                        alt="">
+                                    <img class="w-6 h-6 z-3 -ml-3 border border-black rounded-full flex-wrap"
+                                        src="https://pbs.twimg.com/profile_images/1920153674648551424/_jP8iACJ_normal.jpg"
+                                        alt="">
+                                    <img class="w-6 h-6 z-2 -ml-3 border border-black rounded-full flex-wrap"
+                                        src="https://pbs.twimg.com/profile_images/1555157162774503425/9X-c8Owm_normal.jpg"
+                                        alt="">
+                                    <p class="text-[#61656a] text-xs ml-2 font-semibold">1 day ago · Entertainment ·
+                                        142.3K posts</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Happeing border rounded-2xl border-[#2f3336] px-5 py-3 flex flex-col gap-6">
+                        <p class="text-xl font-bold">What's happening</p>
+                        <div>
+                            <div class="text-sm font-bold flex items-center justify-between">Mahindra XUV 7XO <span
+                                    class="material-symbols-outlined text-[#61656a]">more_horiz</span></div>
+                            <p class="text-[#61656a] text-xs font-semibold">Hello, trendsetter. Price starts at 13.66
+                                Lakh Promoted by Mahindra XUV 7XO</p>
+                        </div>
+                        <div>
+                            <div class="text-[#61656a] text-xs font-semibold flex items-center justify-between">
+                                Technology · Trending <span
+                                    class="material-symbols-outlined text-[#61656a]">more_horiz</span></div>
+                            <p class="text-sm font-bold">#winPad3</p>
+                            <p class="text-[#61656a] text-xs font-semibold">14.9K posts</p>
+                        </div>
+                        <div>
+                            <div class="text-[#61656a] text-xs font-semibold flex items-center justify-between">Trending
+                                in India <span class="material-symbols-outlined text-[#61656a]">more_horiz</span></div>
+                            <p class="text-sm font-bold">#OpenTheRajaSaabIndiaBookings</p>
+                            <p class="text-[#61656a] text-xs font-semibold">1,610 posts</p>
+                        </div>
+                        <div>
+                            <div class="text-[#61656a] text-xs font-semibold flex items-center justify-between">
+                                Motorsport · Trending <span
+                                    class="material-symbols-outlined text-[#61656a]">more_horiz</span></div>
+                            <p class="text-sm font-bold">Lewis</p>
+                            <p class="text-[#61656a] text-xs font-semibold">48.6K posts</p>
+                        </div>
+                        <p class="text-sm text-blue-400">Show more</p>
+                    </div>
+                    <div class="Follow border rounded-2xl border-[#2f3336] px-5 py-3 flex flex-col gap-6">
+                        <p class="text-xl font-bold">Who to follow</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <img class="w-12 h-12 z-1 border border-black rounded-full flex-wrap"
+                                    src="https://pbs.twimg.com/profile_images/1965089012072505344/cpxv8or4_bigger.jpg"
+                                    alt="">
+                                <div>
+                                    <p class="text-sm font-bold">Call of Duty: Mobile</p>
+                                    <p class="text-[#61656a] text-xs font-semibold">@CODMobile</p>
+                                </div>
+                            </div>
+                            <button
+                                class="bg-white text-black border rounded-full border-none py-1 h-8 px-4 font-bold ">Follow</button>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <img class="w-12 h-12 z-1  border border-black rounded-full flex-wrap"
+                                    src="https://pbs.twimg.com/profile_images/1618161752067264512/e3NvcYJt_bigger.jpg"
+                                    alt="">
+                                <div>
+                                    <p class="text-sm font-bold">Leakers On Duty</p>
+                                    <p class="text-[#61656a] text-xs font-semibold">@LeakersOnDuty</p>
+                                </div>
+                            </div>
+                            <button
+                                class="bg-white text-black border rounded-full border-none py-1 h-8 px-4 font-bold ">Follow</button>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <img class="w-12 h-12 z-1  border border-black rounded-full flex-wrap"
+                                    src="https://pbs.twimg.com/profile_images/1927069033607634944/2ojDKFUB_bigger.jpg"
+                                    alt="">
+                                <div>
+                                    <p class="text-sm font-bold">Tribe Gaming</p>
+                                    <p class="text-[#61656a] text-xs font-semibold">@TribeGaming</p>
+                                </div>
+                            </div>
+                            <button
+                                class="bg-white text-black border rounded-full border-none py-1 h-8 px-4 font-bold ">Follow</button>
+                        </div>
+                        <p class="text-sm text-blue-400">Show more</p>
+                    </div>
+                    <footer class="text-[#61656a] text-xs mx-4 flex gap-2 flex-wrap">
+                        <span class="hover:underline">Terms of Service</span>
+                        <span>|</span>
+                        <span class="hover:underline">Privacy Policy</span>
+                        <span>|</span>
+                        <span class="hover:underline">Cookie Policy</span>
+                        <span>|</span>
+                        <span class="hover:underline">Accessibility</span>
+                        <span>|</span>
+                        <span class="hover:underline">Ads info</span>
+                        <span>|</span>
+                        <span class="hover:underline">More...</span>
+                        <span>© 2026 X Corp.</span>
+                    </footer>
+                </div>
+            </div>
+            <div class="w-15">
+                <div class="bg-black border p-2 py-3 rounded-2xl border-none w-13 fixed bottom-20 right-5"
+                    style="box-shadow: 0px 0px 6px 0px white;">
+                    <svg viewBox="0 0 33 32" aria-hidden="true"
+                        class="w-8 invert r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1nao33i r-lwhw9o r-cnnz9e">
+                        <g>
+                            <path
+                                d="M12.745 20.54l10.97-8.19c.539-.4 1.307-.244 1.564.38 1.349 3.288.746 7.241-1.938 9.955-2.683 2.714-6.417 3.31-9.83 1.954l-3.728 1.745c5.347 3.697 11.84 2.782 15.898-1.324 3.219-3.255 4.216-7.692 3.284-11.693l.008.009c-1.351-5.878.332-8.227 3.782-13.031L33 0l-4.54 4.59v-.014L12.743 20.544m-2.263 1.987c-3.837-3.707-3.175-9.446.1-12.755 2.42-2.449 6.388-3.448 9.852-1.979l3.72-1.737c-.67-.49-1.53-1.017-2.515-1.387-4.455-1.854-9.789-.931-13.41 2.728-3.483 3.523-4.579 8.94-2.697 13.561 1.405 3.454-.899 5.898-3.22 8.364C1.49 30.2.666 31.074 0 32l10.478-9.466">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="bg-black border border-none p-2 py-3 pb-1 rounded-2xl w-13 fixed bottom-3 right-5"
+                    style="box-shadow: 0px 0px 6px 0px white;"><span class="material-symbols-outlined"
+                        style="font-size: 35px;">mail</span></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
