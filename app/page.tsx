@@ -8,7 +8,7 @@ import SectionDivider from "@/components/ui/SectionDivider";
 
 export default function Home() {
   return (
-    <main className="bg-black min-h-screen">
+    <main className="bg-black min-h-screen relative">
       <Hero />
       <SectionDivider />
       <About />

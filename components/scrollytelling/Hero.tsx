@@ -1,16 +1,45 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import CanvasSequence from "./CanvasSequence";
 import { motion, useScroll, useTransform } from "framer-motion";
+import gsap from "gsap";
 
 export default function Hero() {
     const containerRef = useRef<HTMLDivElement>(null);
+    const metricsRef = useRef<HTMLDivElement>(null);
+    const headlineRef = useRef<HTMLHeadingElement>(null);
 
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start start", "end start"]
     });
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Intro animation for headline
+            gsap.from(headlineRef.current, {
+                opacity: 0,
+                y: 30,
+                duration: 1.2,
+                ease: "power3.out",
+                delay: 0.5
+            });
+
+            // Staggered reveal for metrics
+            if (metricsRef.current) {
+                gsap.from(metricsRef.current.children, {
+                    opacity: 0,
+                    y: 20,
+                    stagger: 0.2,
+                    duration: 1,
+                    ease: "power2.out",
+                    delay: 1
+                });
+            }
+        });
+        return () => ctx.revert();
+    }, []);
 
     // Blur effect: starts at 0, blurs slightly as we scroll deep
     const blurValue = useTransform(scrollYProgress, [0, 0.5, 1], ["blur(0px)", "blur(0px)", "blur(10px)"]);
@@ -30,15 +59,19 @@ export default function Hero() {
                 </motion.div>
 
                 {/* First Text: Visible initially, fades out quickly */}
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10 p-4">
+                <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-10 p-4">
                     <motion.div
                         style={{ opacity: useTransform(scrollYProgress, [0, 0.10], [1, 0]) }}
-                        className="text-center w-full max-w-4xl mx-auto"
+                        className="text-center w-full max-w-5xl mx-auto"
                     >
-                        <p className="text-xl md:text-2xl text-zinc-400 mb-4">Sahib Hussain</p>
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tighter w-[80%] mx-auto leading-tight">
-                            Web Developer Growing Through Practice and Projects
+                        <p className="text-xl md:text-2xl text-zinc-400 mb-6 uppercase tracking-[0.5em]">Sahib Hussain</p>
+                        <h1
+                            ref={headlineRef}
+                            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-[0.3em] md:tracking-[0.8em] uppercase mb-12 leading-tight"
+                        >
+                            W E L C O M E &nbsp; I T Z &nbsp; S A H I B
                         </h1>
+
                     </motion.div>
                 </div>
 
